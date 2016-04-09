@@ -1,10 +1,10 @@
 # Ballyhoo
-Bloody simple pub/sub JS events based on https://davidwalsh.name/pubsub-javascript implemented in ES6.
+Bloody simple, super tiny, pub/sub JS events class based on https://davidwalsh.name/pubsub-javascript implemented in ES6.
 
 
 
 ## Install
-Simple install the package via atmosphere
+For Meteor Simply install the package via atmosphere
 
 ```sh
 meteor add pushplaybang:ballyhoo
@@ -39,7 +39,7 @@ You can pass any data you wish along to the handler function when emitting (or p
 
 
 ### Contributions and Suggestions Welcome!
-Have something you think this needs or could use as an improvement, let me know.  add [an issue on github]() or fork and create a pull request.
+Have something you think this needs or could use as an improvement, let me know.  add [an issue on github](https://github.com/Pushplaybang/ballyhoo/blob/master/ballyhoo.js) or fork and create a pull request.
 
 
 
