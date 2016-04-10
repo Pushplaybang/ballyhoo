@@ -1,0 +1,25 @@
+{
+  "name": "ballyhoo",
+  "version": "0.0.2",
+  "description": "Bloody simple, super tiny, pub/sub JS events based on https://davidwalsh.name/pubsub-javascript implemented in ES6.",
+  "main": "ballyhoo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pushplaybang/ballyhoo.git"
+  },
+  "keywords": [
+    "events",
+    "pu/sub",
+    "es6",
+    "microlib"
+  ],
+  "author": "Paul van Zyl <paul@nonacreative.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pushplaybang/ballyhoo/issues"
+  },
+  "homepage": "https://github.com/Pushplaybang/ballyhoo#readme"
+}
