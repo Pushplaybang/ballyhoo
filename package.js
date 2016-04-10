@@ -1,7 +1,7 @@
 /* eslint-disable */
 Package.describe({
   name: 'pushplaybang:ballyhoo',
-  version: '0.0.2',
+  version: '0.0.3',
   summary: 'Bloody simple pub/sub JS events',
   git: 'https://github.com/Pushplaybang/ballyhoo',
   documentation: 'README.md',

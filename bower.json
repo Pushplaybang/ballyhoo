@@ -1,7 +1,7 @@
 {
   "name": "ballyhoo",
   "main": "ballyhoo.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "authors": [
     "Paul van Zyl <paul@nonacreative.com>"
   ],
