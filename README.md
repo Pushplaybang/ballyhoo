@@ -10,7 +10,16 @@ For Meteor Simply install the package via atmosphere
 meteor add pushplaybang:ballyhoo
 ```
 
+via bower:
 
+```sh
+bower install ballyhoo --save
+```
+
+via npm:
+```sh
+npm install ballyhoo --save
+```
 
 ## Getting Started
 
