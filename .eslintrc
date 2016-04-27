@@ -1,0 +1,16 @@
+{
+  "parser": "babel-eslint",
+  // ES6 Linting
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+  },
+  "rules": {
+    "no-unused-vars": 0,
+    "no-undef": 0,
+    "space-before-function-paren": 0,
+    "func-names": 0,
+    "comma-dangle": 0,
+  }
+}
