@@ -1,6 +1,6 @@
 {
   "name": "ballyhoo",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Bloody simple, super tiny, pub/sub JS events based on https://davidwalsh.name/pubsub-javascript implemented in ES6.",
   "main": "ballyhoo.js",
   "scripts": {

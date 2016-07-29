@@ -5,12 +5,10 @@ check@1.1.3
 ecmascript@0.4.2
 ecmascript-runtime@0.2.9
 ejson@1.0.10
-es5-shim@4.5.9
 jquery@1.11.7
 meteor@1.1.13
 modules@0.5.2
 modules-runtime@0.6.2
 promise@0.6.6
-pushplaybang:ballyhoo@0.0.3
-pushplaybang:common-polyfills@0.0.1
+pushplaybang:ballyhoo@0.0.4
 underscore@1.0.7

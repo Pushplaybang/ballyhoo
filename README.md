@@ -51,6 +51,10 @@ You can pass any data you wish along to the handler function when emitting (or p
 Have something you think this needs or could use as an improvement, let me know.  add [an issue on github](https://github.com/Pushplaybang/ballyhoo/blob/master/ballyhoo.js) or fork and create a pull request.
 
 
+## Changelog
+This includes notable changes to the package
+
+0.0.4 - setup proper ES6 export
 
 ____
 

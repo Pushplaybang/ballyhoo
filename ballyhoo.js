@@ -5,7 +5,7 @@
  * @locus Anywhere
  * @class
  */
-Ballyhoo = class Ballyhoo {
+class Ballyhoo {
   constructor() {
     this.topics = {};
     this.hop = this.topics.hasOwnProperty;
@@ -49,10 +49,7 @@ Ballyhoo = class Ballyhoo {
     // Cycle through this.topics queue & fire!
     this.topics[topic].forEach((item) => item(data));
   }
-
-};
-
-// export a module if we're in Node
-if (typeof(module) !== 'undefined') {
-  module.exports = Ballyhoo;
 }
+
+// export
+export { Ballyhoo };
