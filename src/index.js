@@ -1,11 +1,8 @@
-/* Ballyhoo - based on https://davidwalsh.name/pubsub-javascript */
 
 /**
- * @summary tiny topic based pub sub events
- * @locus Anywhere
- * @class
+ * @summary Ballyhoo - based on https://davidwalsh.name/pubsub-javascrip
  */
-class Ballyhoo {
+export default class Ballyhoo {
   constructor() {
     this.topics = {};
     this.hop = this.topics.hasOwnProperty;
@@ -28,9 +25,8 @@ class Ballyhoo {
 
     // Provide handle back for removal of topic
     return {
-      // use fat arrow to prevent scoping of 'this' to closure
       remove: () => {
-        delete this.topics[topic][index];
+        this.topics[topic].splice(index, 1);
       },
     };
   }
@@ -43,13 +39,10 @@ class Ballyhoo {
    */
   emit(topic, data = {}) {
     if (!this.hop.call(this.topics, topic)) {
-      return;
+      return this;
     }
 
     // Cycle through this.topics queue & fire!
-    this.topics[topic].forEach((item) => item(data));
+    return this.topics[topic].forEach(item => item(data));
   }
 }
-
-// export
-export { Ballyhoo };

@@ -1,67 +1,81 @@
 # Ballyhoo
-Bloody simple, super tiny, pub/sub JS events class based on https://davidwalsh.name/pubsub-javascript implemented in ES6.
+Bloody simple, super tiny, pub/sub JS events class based on https://davidwalsh.name/pubsub-javascript implemented in ES6, maintained with 100% test coverage.
 
+[![CircleCI](https://circleci.com/gh/Pushplaybang/ballyhoo.svg?style=svg)](https://circleci.com/gh/Pushplaybang/ballyhoo)
+[![Maintainability](https://api.codeclimate.com/v1/badges/88a4f336fb0d21eda0d2/maintainability)](https://codeclimate.com/github/Pushplaybang/ballyhoo/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/88a4f336fb0d21eda0d2/test_coverage)](https://codeclimate.com/github/Pushplaybang/ballyhoo/test_coverage)
 
 
 ## Install
 For Meteor Simply install the package via atmosphere
 
-```sh
-meteor add pushplaybang:ballyhoo
-```
-
-via bower:
-
-```sh
-bower install ballyhoo --save
-```
-
 via npm:
+
 ```sh
 npm install ballyhoo --save
+```
+
+via yarn:
+
+```sh
+yarn add ballyhoo
 ```
 
 ## Getting Started
 
 Using this couldn't be easier.  Create a new instance:
 
-````js
-App.events = new Ballyhoo();
-````
+```js
+import Ballyhoo from 'ballyhoo';
+const events = new Ballyhoo();
+```
 
 The create the listener / subscriber:
 
-````js
-App.events.on('namespace/event', function(data) {
+```js
+events.on('namespace/event', function(data) {
     //... do something when the event fires
 });
-````
+```
+
+note that the `on` function returns a `remove` handler, should you wish to unbind it.
+
+```js
+const event = events.on('namespace/event', function(data) {
+    //... do something when the event fires
+});
+
+// remove event
+event.remove();
+```
 
 Then publish an event at an appropriate time:
 
-````js
-App.events.emit('namespace/event', {});
-````
+```js
+events.emit('namespace/event', {});
+```
 
 You can pass any data you wish along to the handler function when emitting (or publishing an event) via the second argument.
-
-
 
 ### Contributions and Suggestions Welcome!
 Have something you think this needs or could use as an improvement, let me know.  add [an issue on github](https://github.com/Pushplaybang/ballyhoo/blob/master/ballyhoo.js) or fork and create a pull request.
 
-
 ## Changelog
 This includes notable changes to the package
 
-0.0.4 - setup proper ES6 export
-
+- 1.0.x - universal
+  - remove meteor files
+  - add eslint & prettier
+  - update dependencies
+  - use rollup for universal exports
+  - update readme
+  - add cxircleCI
+  - add codeclimate
+- 0.0.4 - setup proper ES6 export
 ____
 
-
-
 ### License [MIT](https://opensource.org/licenses/MIT)
-Copyright (c) 2016 Paul van Zyl
+Copyright (c) 2019 Paul van Zyl
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
