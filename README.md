@@ -63,12 +63,13 @@ Have something you think this needs or could use as an improvement, let me know.
 ## Changelog
 This includes notable changes to the package
 
-- 1.0.x - universal
+- 2.0.x - universal
   - remove meteor files
   - add eslint & prettier
   - update dependencies
   - use rollup for universal exports
   - update readme
+  - add tests
   - add cxircleCI
   - add codeclimate
 - 0.0.4 - setup proper ES6 export
