@@ -7,6 +7,7 @@
   "scripts": {
     "test": "jest --coverage --notify",
     "test:watch": "jest --watchAll --coverage --notify",
+    "test:ci": "jest --ci --runInBand --coverage --reporters=default --reporters=jest-junit",
     "build": "rollup ./src/index.js --file src/index.js --format umd --name \\\"duxedo\\\"",
     "version": "auto-changelog -p && git add CHANGELOG.md",
     "semver:patch": "npm version patch",
@@ -47,5 +48,8 @@
   "bugs": {
     "url": "https://github.com/Pushplaybang/ballyhoo/issues"
   },
-  "homepage": "https://github.com/Pushplaybang/ballyhoo#readme"
+  "homepage": "https://github.com/Pushplaybang/ballyhoo#readme",
+  "dependencies": {
+    "jest-junit": "^6.4.0"
+  }
 }
