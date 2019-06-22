@@ -2,9 +2,21 @@
   "name": "ballyhoo",
   "version": "0.0.4",
   "description": "Bloody simple, super tiny, pub/sub JS events based on https://davidwalsh.name/pubsub-javascript implemented in ES6.",
-  "main": "ballyhoo.js",
+  "main": "index.js",
+  "module": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage --notify",
+    "test:watch": "jest --watchAll --coverage --notify",
+    "build": "rollup ./src/index.js --file src/index.js --format umd --name \\\"duxedo\\\"",
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "semver:patch": "npm version patch",
+    "semver:minor": "npm version minor",
+    "semver:major": "npm version major",
+    "distribute": "npm publish --access public",
+    "distribute:patch": "npm run semver:patch && npm run distribute",
+    "distribute:minor": "npm run semver:minor && npm run distribute",
+    "distribute:major": "npm run semver:major && npm run distribute",
+    "serve:coverage": "http-server ./coverage/lcov-report -p 7357"
   },
   "repository": {
     "type": "git",
@@ -14,10 +26,24 @@
     "events",
     "pu/sub",
     "es6",
-    "microlib"
+    "microlib",
+    ""
   ],
-  "author": "Paul van Zyl <paul@nonacreative.com>",
+  "author": "Paul van Zyl <pushplaybang@gmail.com>",
   "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-spread": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "auto-changelog": "^1.11.0",
+    "babel-jest": "^24.1.0",
+    "eslint": "^5.13.0",
+    "flow-bin": "^0.92.0",
+    "http-server": "^0.11.1",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "rollup": "^1.6.0"
+  },
   "bugs": {
     "url": "https://github.com/Pushplaybang/ballyhoo/issues"
   },

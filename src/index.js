@@ -1,11 +1,8 @@
-/* Ballyhoo - based on https://davidwalsh.name/pubsub-javascript */
 
 /**
- * @summary tiny topic based pub sub events
- * @locus Anywhere
- * @class
+ * @summary Ballyhoo - based on https://davidwalsh.name/pubsub-javascrip
  */
-class Ballyhoo {
+export default class Ballyhoo {
   constructor() {
     this.topics = {};
     this.hop = this.topics.hasOwnProperty;
@@ -50,6 +47,3 @@ class Ballyhoo {
     this.topics[topic].forEach((item) => item(data));
   }
 }
-
-// export
-export { Ballyhoo };

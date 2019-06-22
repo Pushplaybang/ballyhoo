@@ -1,24 +1,17 @@
 # Ballyhoo
 Bloody simple, super tiny, pub/sub JS events class based on https://davidwalsh.name/pubsub-javascript implemented in ES6.
 
-
-
 ## Install
 For Meteor Simply install the package via atmosphere
-
-```sh
-meteor add pushplaybang:ballyhoo
-```
-
-via bower:
-
-```sh
-bower install ballyhoo --save
-```
 
 via npm:
 ```sh
 npm install ballyhoo --save
+```
+
+via yarn:
+```sh
+yarn add ballyhoo
 ```
 
 ## Getting Started
@@ -26,21 +19,32 @@ npm install ballyhoo --save
 Using this couldn't be easier.  Create a new instance:
 
 ````js
-App.events = new Ballyhoo();
+import Ballyhoo from 'ballyhoo';
+const events = new Ballyhoo();
 ````
 
 The create the listener / subscriber:
 
 ````js
-App.events.on('namespace/event', function(data) {
+events.on('namespace/event', function(data) {
     //... do something when the event fires
 });
+````
+note that the `on` function returns a `remove` handler, should you wish to unbind it.
+
+````js
+const event = events.on('namespace/event', function(data) {
+    //... do something when the event fires
+});
+
+// remove event
+event.remove();
 ````
 
 Then publish an event at an appropriate time:
 
 ````js
-App.events.emit('namespace/event', {});
+events.emit('namespace/event', {});
 ````
 
 You can pass any data you wish along to the handler function when emitting (or publishing an event) via the second argument.
@@ -54,14 +58,19 @@ Have something you think this needs or could use as an improvement, let me know.
 ## Changelog
 This includes notable changes to the package
 
-0.0.4 - setup proper ES6 export
+- 1.0.x - universal
+  - remove meteor files
+  - add eslint & prettier
+  - update dependencies
+  - use rollup for universal exports
+  - update readme
+- 0.0.4 - setup proper ES6 export
 
 ____
 
 
-
 ### License [MIT](https://opensource.org/licenses/MIT)
-Copyright (c) 2016 Paul van Zyl
+Copyright (c) 2019 Paul van Zyl
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

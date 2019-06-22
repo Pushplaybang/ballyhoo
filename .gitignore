@@ -1,0 +1,12 @@
+# system
+.DS_Store
+
+# project
+.idea
+.scratch
+.cache
+dist
+node_modules
+coverage
+dist/**/*
+*.env
