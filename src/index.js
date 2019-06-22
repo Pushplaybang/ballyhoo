@@ -25,9 +25,8 @@ export default class Ballyhoo {
 
     // Provide handle back for removal of topic
     return {
-      // use fat arrow to prevent scoping of 'this' to closure
       remove: () => {
-        delete this.topics[topic][index];
+          this.topics[topic].splice(index, 1);
       },
     };
   }
@@ -40,10 +39,10 @@ export default class Ballyhoo {
    */
   emit(topic, data = {}) {
     if (!this.hop.call(this.topics, topic)) {
-      return;
+      return this;
     }
 
     // Cycle through this.topics queue & fire!
-    this.topics[topic].forEach((item) => item(data));
+    return this.topics[topic].forEach((item) => item(data));
   }
 }
