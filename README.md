@@ -9,11 +9,13 @@ Bloody simple, super tiny, pub/sub JS events class based on https://davidwalsh.n
 For Meteor Simply install the package via atmosphere
 
 via npm:
+
 ```sh
 npm install ballyhoo --save
 ```
 
 via yarn:
+
 ```sh
 yarn add ballyhoo
 ```
@@ -22,42 +24,40 @@ yarn add ballyhoo
 
 Using this couldn't be easier.  Create a new instance:
 
-````js
+```js
 import Ballyhoo from 'ballyhoo';
 const events = new Ballyhoo();
-````
+```
 
 The create the listener / subscriber:
 
-````js
+```js
 events.on('namespace/event', function(data) {
     //... do something when the event fires
 });
-````
+```
+
 note that the `on` function returns a `remove` handler, should you wish to unbind it.
 
-````js
+```js
 const event = events.on('namespace/event', function(data) {
     //... do something when the event fires
 });
 
 // remove event
 event.remove();
-````
+```
 
 Then publish an event at an appropriate time:
 
-````js
+```js
 events.emit('namespace/event', {});
-````
+```
 
 You can pass any data you wish along to the handler function when emitting (or publishing an event) via the second argument.
 
-
-
 ### Contributions and Suggestions Welcome!
 Have something you think this needs or could use as an improvement, let me know.  add [an issue on github](https://github.com/Pushplaybang/ballyhoo/blob/master/ballyhoo.js) or fork and create a pull request.
-
 
 ## Changelog
 This includes notable changes to the package
@@ -68,10 +68,10 @@ This includes notable changes to the package
   - update dependencies
   - use rollup for universal exports
   - update readme
+  - add cxircleCI
+  - add codeclimate
 - 0.0.4 - setup proper ES6 export
-
 ____
-
 
 ### License [MIT](https://opensource.org/licenses/MIT)
 Copyright (c) 2019 Paul van Zyl
