@@ -29,7 +29,7 @@ it('should create multiple handlers for a topic', () => {
 it('should provide a remove handler', () => {
   const event = events.on('test/event', () => {});
 
-  let topics = Object.keys(events.topics);
+  const topics = Object.keys(events.topics);
   expect(topics).toHaveLength(1);
 
   expect(event).toHaveProperty('remove');
@@ -43,7 +43,7 @@ it('should call handlers on emit', () => {
   let count = 0;
 
   events.on('test/event', () => {
-    return count += 1;
+    count += 1;
   });
 
   events.emit('test/event');
