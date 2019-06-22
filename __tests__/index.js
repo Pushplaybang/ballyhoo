@@ -42,8 +42,8 @@ it('should provide a remove handler', () => {
 it('should call handlers on emit', () => {
   let count = 0;
 
-   events.on('test/event', () => {
-    count += 1;
+  events.on('test/event', () => {
+    return count += 1;
   });
 
   events.emit('test/event');

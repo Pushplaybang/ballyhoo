@@ -26,7 +26,7 @@ export default class Ballyhoo {
     // Provide handle back for removal of topic
     return {
       remove: () => {
-          this.topics[topic].splice(index, 1);
+        this.topics[topic].splice(index, 1);
       },
     };
   }
@@ -43,6 +43,6 @@ export default class Ballyhoo {
     }
 
     // Cycle through this.topics queue & fire!
-    return this.topics[topic].forEach((item) => item(data));
+    return this.topics[topic].forEach(item => item(data));
   }
 }
