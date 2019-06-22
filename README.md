@@ -1,6 +1,10 @@
 # Ballyhoo
 Bloody simple, super tiny, pub/sub JS events class based on https://davidwalsh.name/pubsub-javascript implemented in ES6.
 
+[![CircleCI](https://circleci.com/gh/Pushplaybang/ballyhoo.svg?style=svg)](https://circleci.com/gh/Pushplaybang/ballyhoo)
+[![Maintainability](https://api.codeclimate.com/v1/badges/88a4f336fb0d21eda0d2/maintainability)](https://codeclimate.com/github/Pushplaybang/ballyhoo/maintainability)
+
+
 ## Install
 For Meteor Simply install the package via atmosphere
 
