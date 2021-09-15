@@ -50,6 +50,6 @@
   },
   "homepage": "https://github.com/Pushplaybang/ballyhoo#readme",
   "dependencies": {
-    "jest-junit": "^6.4.0"
+    "jest-junit": "^11.0.1"
   }
 }
